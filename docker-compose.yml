@@ -11,6 +11,12 @@ services:
     volumes:
       - ollama-data:/root/.ollama
     gpus: all
+    networks:
+      - n8n
 
 volumes:
   ollama-data:
+
+networks:
+  n8n:
+    external: true
